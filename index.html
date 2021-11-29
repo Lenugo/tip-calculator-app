@@ -26,8 +26,9 @@
 
     <main class="main">
       <section class="main__content">
-        <article>
-          <div class="input__container">
+        
+        <article class="inputs__container">
+          <div class="input__content">
             <img src="/images/icon-dollar.svg" alt="dollar icon" />
             <label>Bill</label>
             <input type="text" />
@@ -41,19 +42,31 @@
           <button>50%</button>
           <button>Custom</button>
 
-          <div class="input__container">
+          <div class="input__content">
             <img src="/images/icon-person.svg" alt="person icon" />
             <label>Number of People</label>
             <input type="number" />
           </div>
         </article>
 
-        <article>
-          <p>Tip Amount</p>
-          <span> / person </span>
-
-          <p>Total</p>
-          <span> / person </span>
+        <article class="results__container">
+          <div class="details__content">
+            <div class="details">
+              <p>
+                Tip Amount <br />
+                <span> / person </span>
+              </p>
+              <span>$0.00</span>
+            </div>
+            
+            <div class="details">
+              <p>
+                Total <br />
+                <span> / person </span>
+              </p>
+              <span>$0.00</span>
+            </div>
+          </div>
 
           <button>Reset</button>
         </article>
