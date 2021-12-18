@@ -16,7 +16,7 @@
   border: none;
   text-decoration: none;
   transition: 0.1s linear;
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 html {
@@ -69,7 +69,7 @@ body {
   position: relative;
 }
 
-.input__content input[type="number"] {
+.input__content input[type='number'] {
   width: 100%;
   padding: 0.4em 0.6em;
   background-color: var(--light-grayish-cyan2);
@@ -79,8 +79,8 @@ body {
   font-weight: bold;
 }
 
-.input__content input[type="number"]::-webkit-outer-spin-button,
-.input__content input[type="number"]::-webkit-inner-spin-button {
+.input__content input[type='number']::-webkit-outer-spin-button,
+.input__content input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
   -moz-appearance: textfield;
@@ -112,7 +112,7 @@ body {
   gap: 0.6em;
 }
 
-.btn__content button {
+.btn-percentage {
   background-color: var(--very-dark-cyan);
   padding: 0.6em;
   width: 100%;
@@ -124,14 +124,18 @@ body {
   font-weight: bolder;
 }
 
-.btn__content button:last-child {
+.btn-percentage:last-child {
   background-color: var(--light-grayish-cyan2);
   color: var(--very-dark-cyan);
 }
 
-.btn__content button:focus {
+.btn-percentage:focus {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
+}
+
+.btn-percentage:not(:last-child):after {
+  content: '%';
 }
 
 .results__container {
@@ -162,10 +166,14 @@ body {
   font-size: smaller;
 }
 
-.details span {
+.details--amount {
   color: var(--strong-cyan);
   font-size: 2.2rem;
   font-weight: bold;
+}
+
+.details--amount::before {
+  content: '$';
 }
 
 .results__container button {
@@ -178,6 +186,7 @@ body {
   font-weight: bold;
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
+  cursor: pointer;
 }
 
 /* Media query */
