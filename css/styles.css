@@ -25,6 +25,10 @@ html {
 
 body {
   background-color: var(--light-grayish-cyan1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -36,7 +40,7 @@ body {
 .title {
   color: var(--dark-grayish-cyan1);
   letter-spacing: 0.2em;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .main {
@@ -156,6 +160,7 @@ body {
   -webkit-appearance: none;
   margin: 0;
   -moz-appearance: textfield;
+  display: none;
 }
 
 .custom-percentage::placeholder {
@@ -208,12 +213,15 @@ body {
   border-radius: 0.3em;
   font-size: 1rem;
   font-weight: bold;
-  background-color: var(--strong-cyan);
+  background-color: var(--light-grayish-cyan1);
+  opacity: 0.3;
   color: var(--very-dark-cyan);
 }
 
 .results__container--btn-reset:hover {
   cursor: pointer;
+  opacity: 1;
+  background-color: var(--strong-cyan);
   color: var(--white);
 }
 
