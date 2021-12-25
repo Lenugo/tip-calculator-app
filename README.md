@@ -10,7 +10,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
 - [Author](#author)
 
@@ -36,7 +35,7 @@ Users should be able to:
 
 ### Links 🔗
 
-- Solution URL: [solution URL here](https://your-solution-url.com)
+- Solution URL: [solution URL here](https://www.frontendmentor.io/solutions/responsive-tip-calculator-app-RjzmSiEmH)
 - Live Site URL: [live site here](https://lenugo.github.io/tip-calculator-app/)
 
 ## My process 🛠️
