@@ -217,6 +217,20 @@ body {
   color: var(--white);
 }
 
+.attribution {
+  font-size: 0.7em;
+  text-align: center;
+  font-weight: 400;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+  font-size: 1.1em;
+}
+
 /* Media query */
 
 @media (max-width: 678px) {
