@@ -16,7 +16,7 @@
   border: none;
   text-decoration: none;
   transition: 0.1s linear;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
 }
 
 html {
@@ -69,7 +69,7 @@ body {
   position: relative;
 }
 
-.input__content input[type='number'] {
+.input__content input[type="number"] {
   width: 100%;
   padding: 0.4em 0.6em;
   background-color: var(--light-grayish-cyan2);
@@ -79,8 +79,8 @@ body {
   font-weight: bold;
 }
 
-.input__content input[type='number']::-webkit-outer-spin-button,
-.input__content input[type='number']::-webkit-inner-spin-button {
+.input__content input[type="number"]::-webkit-outer-spin-button,
+.input__content input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
   -moz-appearance: textfield;
@@ -98,6 +98,10 @@ body {
   left: 4%;
 }
 
+.input__content input::placeholder {
+  color: var(--dark-grayish-cyan2);
+}
+
 .btn__container span {
   color: var(--dark-grayish-cyan1);
   font-size: small;
@@ -112,30 +116,50 @@ body {
   gap: 0.6em;
 }
 
-.btn-percentage {
+.btn-percentage:not([type="number"]) {
   background-color: var(--very-dark-cyan);
   padding: 0.6em;
   width: 100%;
   border-radius: 0.4em;
   color: var(--white);
-  font-size: medium;
   cursor: pointer;
   font-size: larger;
   font-weight: bolder;
 }
 
-.btn-percentage:last-child {
+.custom-percentage {
+  padding: 0.6em;
+  width: 100%;
+  border-radius: 0.4em;
+  cursor: pointer;
+  font-size: larger;
+  font-weight: bolder;
   background-color: var(--light-grayish-cyan2);
   color: var(--very-dark-cyan);
 }
 
-.btn-percentage:focus {
+.btn-percentage:not([type="number"]):focus {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
 }
 
-.btn-percentage:not(:last-child):after {
-  content: '%';
+.btn-percentage:not([type="number"]):after {
+  content: "%";
+}
+
+.custom-percentage:focus {
+  outline: 3px solid var(--strong-cyan);
+}
+
+.custom-percentage:last-child::-webkit-inner-spin-button,
+.custom-percentage:last-child::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+}
+
+.custom-percentage::placeholder {
+  font-size: larger;
 }
 
 .results__container {
@@ -173,10 +197,10 @@ body {
 }
 
 .details--amount::before {
-  content: '$';
+  content: "$";
 }
 
-.results__container button {
+.results__container--btn-reset {
   display: block;
   width: 100%;
   text-transform: uppercase;
@@ -186,7 +210,11 @@ body {
   font-weight: bold;
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
+}
+
+.results__container--btn-reset:hover {
   cursor: pointer;
+  color: var(--white);
 }
 
 /* Media query */
