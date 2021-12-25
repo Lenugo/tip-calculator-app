@@ -20,18 +20,25 @@ tipAmount.map(tipMap => {
     let peopleValue = people.value;
     const amount = (Number(billValue) * convert) / Number(peopleValue);
     const total = (Number(billValue) * convert + Number(billValue)) / Number(peopleValue);
-    console.log(amount);
+
+    if (e.currentTarget.type !== "number") customAmount.value = "";
+
+    customAmount.addEventListener("click", () => {
+      personAmount.innerText = (0).toFixed(2);
+      totalAmount.innerText = (0).toFixed(2);
+    });
+
     customAmount.addEventListener("input", e => {
       let value = e.target.value;
       const inputAmount = (Number(billValue) * (value / 100)) / Number(peopleValue);
       const inputTotal = (Number(billValue) * (value / 100) + Number(billValue)) / Number(peopleValue);
-      if (!NaN || value.length > 0) {
+      if (value.length > 0) {
         personAmount.innerText = inputAmount.toFixed(2);
         totalAmount.innerText = inputTotal.toFixed(2);
       }
     });
 
-    if (billValue.length > 0 && people.value.length > 0) {
+    if (billValue.length > 0 && peopleValue.length > 0) {
       personAmount.innerText = amount.toFixed(2);
       totalAmount.innerText = total.toFixed(2);
     }
